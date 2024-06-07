@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwindConfig.js"></script>
+
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="main-cont">
+
+    <div class="sticky top-0 text-center w-full sm:w-fit backdrop-blur-lg p-4 sm:p-0 m-auto">
+      <h1 class="text-4xl text-center font-bold mb-4 flex gap-4 items-center p-4 justify-center">
+        <span style="letter-spacing: 1px;">
+          Weather<span class="text-#F05514">Whiz</span>
+        </span>
+      </h1>
+
+      
+    </div>
+
+
+<div class="w-fit m-auto">
+
+  <form id="searchForm" class="flex flex-col md:flex-row items-center mb-4">
+    <div class="flex w-full mb-2 md:mb-0">
+      <input
+        type="text"
+        id="searchInput"
+        class="p-2 border rounded-l-md flex-grow"
+        placeholder="Enter city or zip code"
+      />
+      <button
+        type="submit"
+        class="p-2 bg-blue-500 text-white rounded-r-md flex-shrink-0"
+      >
+      <i class="fa fa-search"></i>
+      </button>
+      <button
+        id="geoLocationButton"
+        type="button"
+        class="p-2 bg-green-500 text-white rounded-md ml-2 flex-shrink-0"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C8.13401 2 5 5.13401 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.866-3.134-7-7-7zm0 9.5c-1.381 0-2.5-1.119-2.5-2.5S10.619 6.5 12 6.5 14.5 7.619 14.5 9 13.381 11.5 12 11.5z"/>
+        </svg>
+      </button>
+    </div>
+    <div class="flex items-center ml-0 md:ml-4 mt-2 md:mt-0">
+      <label class="mr-2">Unit:</label>
+      <select id="unitSelect" class="p-2 border rounded-md">
+        <option value="metric">Celsius</option>
+        <option value="imperial">Fahrenheit</option>
+      </select>
+    </div>
+  </form>
+
+</div>
+    
+
+
+    <div class="w-fit m-auto">
+      <div id="weatherCard"    class="p-6 bg-white rounded-lg shadow-md flex gap-12 justify-around sm:w-1/2 w-fit m-auto">
+      </div>
+      <div id="forecastList" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 p-2"></div>
+    </div>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment/min/moment.min.js"></script>
+  <script type="module" src="forecast.js"></script>
+  <script type="module" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+.main-cont {
+  background-image: url("./assets/background.png");
+}
+
+#weatherCard{
+    visibility: hidden;
+}
